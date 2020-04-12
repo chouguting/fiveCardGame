@@ -2,24 +2,24 @@
 #define FIG1003_H
 
 
-struct card {
-    const char* face;
-    const char* suit;
+struct card
+{
+	const char* face;
+	const char* suit;
 
-    int id;
+	int id;
 };
-
 
 
 typedef struct card Card;
 
-void fillDeck(Card* const, const char* [], const char* []);	// ³]µPªì©l­È
-void shuffle(Card* const);																		// ¬~µP
-void deal(const Card* const,int quantity);
+
+void shuffle(Card*); 
+void deal(const Card*, int quantity);
 
 int giveScore(Card wDeck[], int size);
 
-void fillDeckFaceFirst(Card* const wDeck, const char* wFace[],const char* wSuit[]);
+void fillDeckFaceFirst(Card* wDeck, const char* wFace[], const char* wSuit[]);
 
 
 int isFlush(Card wDeck[], int size);
@@ -30,4 +30,3 @@ int howManyOfaKind(int multipleKind, Card wDeck[], int size);
 int determine(Card wDeck[], int size);
 void sort(Card wDeck[], int size);
 #endif
-
